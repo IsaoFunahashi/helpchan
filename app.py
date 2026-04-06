@@ -32,7 +32,7 @@ conn = init_db()
 if 'logged_in' not in st.session_state:
     st.session_state.update({'logged_in': False, 'user_name': '', 'role': 'user'})
 
-st.title("🤝 プロフェッショナル・マッチング")
+st.title("🤝 ヘルプちゃん")
 
 # --- 認証フロー ---
 if not st.session_state['logged_in']:
