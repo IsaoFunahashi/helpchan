@@ -87,7 +87,7 @@ if not st.session_state['logged_in']:
             role = st.selectbox("権限", ["user", "admin"])
             if st.form_submit_button("登録"):
                 c = conn.cursor()
-                c.execute('INSERT INTO users(name, password, email, affiliation, position, keywords, role) VALUES (?,?,?,?,?,?,?,?)', 
+                c.execute('INSERT INTO users(name, password, email, affiliation, position, keywords, role) VALUES (?,?,?,?,?,?,?)', 
                           (new_user, make_hashes(new_password), new_email, new_affi, new_pos, new_key, role))
                 conn.commit()
                 st.success("登録完了！")
